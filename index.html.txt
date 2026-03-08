@@ -2,32 +2,37 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Message et Média avec QR Code</title>
+  <title>Message pour Nadré</title>
   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       margin-top: 40px;
+      background-color: #f9f9f9;
     }
     #qrcode {
       margin-top: 20px;
     }
     img, video {
       margin-top: 15px;
-      max-width: 300px;
+      max-width: 320px;
       border-radius: 8px;
+    }
+    p {
+      font-size: 18px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <h1>Mon Message</h1>
-  <p id="message">Bonne fête de la femme, mon amour 💖</p>
+  <h1>💖 Bonne fête de la femme 💖</h1>
+  <p id="message">Nadré, tu es mon idéal, mon amour, et la femme qui me fait sentir homme à chaque contact. Je t’aime.</p>
 
-  <!-- Exemple d'image -->
+  <!-- Image symbolique -->
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Tulip_-_floriade_canberra.jpg/320px-Tulip_-_floriade_canberra.jpg" alt="Tulipe">
 
-  <!-- Exemple de vidéo -->
+  <!-- Vidéo romantique -->
   <video controls>
     <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
     Votre navigateur ne supporte pas la vidéo.
@@ -36,8 +41,8 @@
   <div id="qrcode"></div>
 
   <script>
-    // Ici, tu peux mettre l’URL de la page ou du contenu
-    const url = window.location.href; // génère un QR vers la page elle-même
+    // Mets ici l’URL de ton site GitHub Pages une fois activé
+    const url = "https://tonpseudo.github.io/mon-message/";
 
     // Génération du QR code
     QRCode.toCanvas(document.getElementById("qrcode"), url, function (error) {
