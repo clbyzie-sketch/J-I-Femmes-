@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Message et Média avec QR Code</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 40px;
+    }
+    #qrcode {
+      margin-top: 20px;
+    }
+    img, video {
+      margin-top: 15px;
+      max-width: 300px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mon Message</h1>
+  <p id="message">Bonne fête de la femme, mon amour 💖</p>
+
+  <!-- Exemple d'image -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Tulip_-_floriade_canberra.jpg/320px-Tulip_-_floriade_canberra.jpg" alt="Tulipe">
+
+  <!-- Exemple de vidéo -->
+  <video controls>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la vidéo.
+  </video>
+
+  <div id="qrcode"></div>
+
+  <script>
+    // Ici, tu peux mettre l’URL de la page ou du contenu
+    const url = window.location.href; // génère un QR vers la page elle-même
+
+    // Génération du QR code
+    QRCode.toCanvas(document.getElementById("qrcode"), url, function (error) {
+      if (error) console.error(error);
+      console.log("QR Code généré !");
+    });
+  </script>
+</body>
+</html>
